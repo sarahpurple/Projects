@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+
+<html>
+
+    <head>
+        
+        <title>Exercise One</title>
+        <script type="text/javascript" src ="/Scripts/App/exercise_one.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/Content/styles/css/exerciseone.css"/>
+        
+        @* I've restructed the snippet as it was returning an error *@
+        <script type="text/javascript">
+
+            function getImages () {
+                var script = document.createElement('script');
+
+                var tags = 'london';
+                script.src = 'http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=cb&tags=' + tags;
+                document.head.appendChild(script);
+            };
+
+            function cb(data) {
+
+                var imageHtml = '';
+
+                for (var i = 0; i < data.items.length; i++) {
+                    var className = 'img-result';
+                    if (sessionStorage.getItem(data.items[i].media.m) != null) {
+                        className += ' selected';
+                    }
+                    imageHtml += '<div id="' + data.items[i].media.m + '" class="' + className + '" onClick="imageClick(this)"><img src="' + data.items[i].media.m + '"/></div>';
+                }
+                document.getElementById("photos").innerHTML = imageHtml;
+
+            }
+
+            getImages();
+        </script>
+    </head>
+
+    <body>
+        <section id="photos">
+           
+        </section>
+    </body>
+
+</html>

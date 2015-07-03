@@ -1,0 +1,103 @@
+﻿@import "_settings.scss";
+@import "_responsive.scss";
+@import "_grid.scss";
+
+
+body {
+    font-size: 1em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: $colour-one;
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+
+}
+a{
+    color: $colour-one;
+    text-decoration: none;
+}
+
+ul{
+              list-style: none;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/*.body-wrapper {
+    padding: 10px 10px 0 10px;
+}*/
+
+header, footer, nav, section {
+    display: block;
+}
+
+section{
+    position:relative;
+
+}
+
+p{
+    margin-bottom: 1em;
+
+}
+
+h1{
+    font-size:2.5em;
+    font-weight: normal;
+}
+h2{
+    font-size:1.75em;
+    font-weight: normal;
+}
+
+
+.icon {
+    max-width: 30%;
+    height: auto;
+}
+
+
+
+#mobile-menu{
+    text-align:center;
+
+}
+footer{
+        height: 60px;
+        background-color: $background-colour;
+           border: 2px solid $border-colour;
+           left: 0;
+           padding:10px;
+
+    }   
+
+#more-info{
+    float: right;
+    margin-left:20px;
+    ul{
+        list-style:disc;
+    }
+
+}
+
+.clearfix{
+    clear:both;
+}
+
+.show-button{
+    padding: 5px 10px;
+    background-color: $background-colour;
+   border: 2px solid $border-colour;
+}
+
+.footer-icon{
+
+}
+
+#inner-footer{
+    width:75%;
+    margin:auto;
+}
+

@@ -1,0 +1,32 @@
+﻿body {
+	width: 90%;
+	margin: auto;
+}
+
+
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;  
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+
+}
+
+.img-result {
+	margin: 15px 25px;
+}
+
+div.selected {
+	border: 6px dashed #FFC6D0;
+}
